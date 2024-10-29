@@ -11,6 +11,8 @@ from flask import Flask, request, jsonify
 app = Flask(__name__)
 
 @app.route('/sum', methods=['GET'])
+def hello():
+    return "hello. send me an api request to calculate a sum of 2 numbers, however large :)"
 def calculate_sum():
     # Get numbers from query parameters
     num1 = request.args.get('num1', type=float)
